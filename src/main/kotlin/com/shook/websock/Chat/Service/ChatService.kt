@@ -22,6 +22,7 @@ public class ChatService(private var chatRooms: LinkedHashMap<String, ChatRoom>)
 
     public fun createRoom(id: String): ChatRoom {
         val chatRoom = ChatRoom(roomId = id)
+        chatRooms[id] = chatRoom // 방 생성
         return chatRoom
     }
 
