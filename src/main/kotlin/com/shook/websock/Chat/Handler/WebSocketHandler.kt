@@ -16,8 +16,17 @@ public class WebSocketHandler(private  val service: ChatService) :  TextWebSocke
 
     override fun handleTextMessage(session: WebSocketSession, message: TextMessage) {
         val payload = message.payload
-        val chatMessage = objectMapper.readValue<ChatMessage>(payload)
-        val room = service.findByRoomId(chatMessage.roomId)
-        room?.handleActions(session, chatMessage, service)
+        println("Paylod: ${payload}")
+
+        try {
+            val chatMessage = objectMapper.readValue<ChatMessage>(payload)
+            println("chatMessage: ${chatMessage}")
+            val room = service.findByRoomId(chatMessage.roomId)
+            println("room: ${room}")
+            room?.handleActions(session, chatMessage, service)
+        } catch(e: Exception) {
+            println(e)
+        }
+
     }
 }
