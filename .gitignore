@@ -37,4 +37,11 @@ out/
 .vscode/
 
 ### Kotlin ###
+*.class
 .kotlin
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
