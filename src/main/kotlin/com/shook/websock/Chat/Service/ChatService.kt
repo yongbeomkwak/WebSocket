@@ -5,7 +5,6 @@ import com.shook.websock.Chat.ChatRoom.ChatRoom
 import org.springframework.stereotype.Service
 import org.springframework.web.socket.TextMessage
 import org.springframework.web.socket.WebSocketSession
-import java.util.UUID
 
 @Service
 public class ChatService(private var chatRooms: LinkedHashMap<String, ChatRoom>) {
@@ -24,6 +23,12 @@ public class ChatService(private var chatRooms: LinkedHashMap<String, ChatRoom>)
         val chatRoom = ChatRoom(roomId = id)
         chatRooms[id] = chatRoom // 방 생성
         return chatRoom
+    }
+
+    public fun terminateRoom(id: String) {
+        val room = chatRooms[id]
+        room?.terminate() // 세션 종료
+        chatRooms.remove(id) // 방 삭제
     }
 
     public fun<T> sendMessage(session: WebSocketSession, message: T) {

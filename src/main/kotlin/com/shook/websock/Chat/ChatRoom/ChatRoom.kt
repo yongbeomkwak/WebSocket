@@ -12,11 +12,26 @@ public class ChatRoom(val roomId: String) {
         if (message.type == MessageType.ENTER) {
             sessions.add(session)
             message.content = message.sender + "님이 입장했습니다."
+            joinMessage(message, service, session)
+        } else if (message.type == MessageType.LEAVE) {
+            sessions.remove(session)
+            println("${session} is removed")
+        } else {
+            if (sessions.contains(session)) {
+                sendMessage(message, service)
+            }
         }
-        sendMessage(message, service)
     }
 
-    public fun<T> sendMessage(message: T, service: ChatService) {
+    public fun terminate() {
+        sessions.clear()
+    }
+
+    private fun<T> sendMessage(message: T, service: ChatService) {
         sessions.parallelStream().forEach { service.sendMessage(it, message) }
+    }
+
+    private fun<T> joinMessage(message: T, service: ChatService, session: WebSocketSession) {
+        service.sendMessage(session, message)
     }
 }
