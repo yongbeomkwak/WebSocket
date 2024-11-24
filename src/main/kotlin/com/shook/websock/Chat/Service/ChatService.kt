@@ -21,14 +21,22 @@ public class ChatService(private var chatRooms: LinkedHashMap<String, ChatRoom>)
 
     public fun createRoom(id: String): ChatRoom {
         val chatRoom = ChatRoom(roomId = id)
-        chatRooms[id] = chatRoom // 방 생성
+
+        if (findByRoomId(id) == null) {
+            chatRooms[id] = chatRoom // 방 생성
+        }
+
         return chatRoom
     }
 
     public fun terminateRoom(id: String) {
-        val room = chatRooms[id]
-        room?.terminate() // 세션 종료
-        chatRooms.remove(id) // 방 삭제
+        val room = findByRoomId(id)
+
+        if ( room != null) {
+            room.terminate() // 세션 종료
+            chatRooms.remove(id) // 방 삭제
+        }
+
     }
 
     public fun<T> sendMessage(session: WebSocketSession, message: T) {

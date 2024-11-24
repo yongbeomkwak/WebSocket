@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.*
 class Controller(private val service: ChatService) {
 
     @PostMapping()
-    fun createRoom(@RequestBody roomDTO: RoomDTO): ChatRoom {
-        return service.createRoom(roomDTO.id)
+    fun createRoom(@RequestBody roomDTO: RoomDTO): String {
+        service.createRoom(id = roomDTO.id)
+        println("${roomDTO.id} is created")
+        return "${roomDTO.id} is created"
     }
 
     @DeleteMapping("/delete/{id}")
