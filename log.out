@@ -1,0 +1,19 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2024-11-25T23:02:51.874+09:00  INFO 37003 --- [websock] [           main] com.shook.websock.WebsockApplicationKt   : Starting WebsockApplicationKt v0.0.1-SNAPSHOT using Java 21.0.3 with PID 37003 (/Users/hamp/Desktop/Spring예제/websock/build/libs/websock-0.0.1-SNAPSHOT.jar started by hamp in /Users/hamp/Desktop/Spring예제/websock)
+2024-11-25T23:02:51.875+09:00  INFO 37003 --- [websock] [           main] com.shook.websock.WebsockApplicationKt   : No active profile set, falling back to 1 default profile: "default"
+2024-11-25T23:02:52.369+09:00  INFO 37003 --- [websock] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-25T23:02:52.382+09:00  INFO 37003 --- [websock] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-25T23:02:52.383+09:00  INFO 37003 --- [websock] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-11-25T23:02:52.400+09:00  INFO 37003 --- [websock] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-25T23:02:52.401+09:00  INFO 37003 --- [websock] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 499 ms
+2024-11-25T23:02:52.629+09:00  INFO 37003 --- [websock] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-25T23:02:52.642+09:00  INFO 37003 --- [websock] [           main] com.shook.websock.WebsockApplicationKt   : Started WebsockApplicationKt in 0.977 seconds (process running for 1.246)
