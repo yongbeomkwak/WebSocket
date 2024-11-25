@@ -8,12 +8,18 @@
 
  :: Spring Boot ::                (v3.4.0)
 
-2024-11-25T23:02:51.874+09:00  INFO 37003 --- [websock] [           main] com.shook.websock.WebsockApplicationKt   : Starting WebsockApplicationKt v0.0.1-SNAPSHOT using Java 21.0.3 with PID 37003 (/Users/hamp/Desktop/Spring예제/websock/build/libs/websock-0.0.1-SNAPSHOT.jar started by hamp in /Users/hamp/Desktop/Spring예제/websock)
-2024-11-25T23:02:51.875+09:00  INFO 37003 --- [websock] [           main] com.shook.websock.WebsockApplicationKt   : No active profile set, falling back to 1 default profile: "default"
-2024-11-25T23:02:52.369+09:00  INFO 37003 --- [websock] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-11-25T23:02:52.382+09:00  INFO 37003 --- [websock] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-25T23:02:52.383+09:00  INFO 37003 --- [websock] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2024-11-25T23:02:52.400+09:00  INFO 37003 --- [websock] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-25T23:02:52.401+09:00  INFO 37003 --- [websock] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 499 ms
-2024-11-25T23:02:52.629+09:00  INFO 37003 --- [websock] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-11-25T23:02:52.642+09:00  INFO 37003 --- [websock] [           main] com.shook.websock.WebsockApplicationKt   : Started WebsockApplicationKt in 0.977 seconds (process running for 1.246)
+2024-11-25T23:15:20.524+09:00  INFO 10703 --- [websock] [           main] com.shook.websock.WebsockApplicationKt   : Starting WebsockApplicationKt v0.0.1-SNAPSHOT using Java 21.0.4 with PID 10703 (/root/WebSocket/build/libs/websock-0.0.1-SNAPSHOT.jar started by root in /root/WebSocket)
+2024-11-25T23:15:20.527+09:00  INFO 10703 --- [websock] [           main] com.shook.websock.WebsockApplicationKt   : No active profile set, falling back to 1 default profile: "default"
+2024-11-25T23:15:22.115+09:00  INFO 10703 --- [websock] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-25T23:15:22.133+09:00  INFO 10703 --- [websock] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-25T23:15:22.134+09:00  INFO 10703 --- [websock] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-11-25T23:15:22.178+09:00  INFO 10703 --- [websock] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-25T23:15:22.180+09:00  INFO 10703 --- [websock] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1517 ms
+2024-11-25T23:15:22.843+09:00  INFO 10703 --- [websock] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-25T23:15:22.866+09:00  INFO 10703 --- [websock] [           main] com.shook.websock.WebsockApplicationKt   : Started WebsockApplicationKt in 3.032 seconds (process running for 3.724)
+2024-11-25T23:15:25.046+09:00  INFO 10703 --- [websock] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-25T23:15:25.047+09:00  INFO 10703 --- [websock] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-25T23:15:25.049+09:00  INFO 10703 --- [websock] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+접속 완료 StandardWebSocketSession[id=a4bd7f66-97f6-9edc-7734-d02e5cc613c0, uri=ws://211.188.58.35:8080/ws/chat]
+chatMessage: ChatMessage(type=ENTER, content=HELLo, sender=iOS, roomId=1234)
+room: com.shook.websock.Chat.ChatRoom.ChatRoom@6166fe4f
