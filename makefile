@@ -3,4 +3,5 @@ terminate:
 
 reboot:
 		make terminate
+		./gradlew build
 		sh Scripts/boot.sh
