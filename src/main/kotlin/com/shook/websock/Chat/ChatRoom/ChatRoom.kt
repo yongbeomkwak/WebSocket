@@ -1,7 +1,7 @@
 package com.shook.websock.Chat.ChatRoom
 
-import com.shook.websock.Chat.Model.ChatMessage
-import com.shook.websock.Chat.Model.MessageType
+import com.shook.websock.Chat.Entity.ChatMessage
+import com.shook.websock.Chat.Entity.MessageType
 import com.shook.websock.Chat.Service.ChatService
 import org.springframework.web.socket.WebSocketSession
 

@@ -1,4 +1,4 @@
-package com.shook.websock.Chat.DTO
+package com.shook.websock.Base.DTO
 
 data class BaseDTO(
     val statusCode: Int,

@@ -1,6 +1,4 @@
-package com.shook.websock.Chat.Model
-
-import com.fasterxml.jackson.annotation.JsonAutoDetect
+package com.shook.websock.Chat.Entity
 
 public enum class MessageType {
         ENTER, CHAT

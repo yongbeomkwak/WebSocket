@@ -2,7 +2,7 @@ package com.shook.websock.Chat.Handler
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import com.shook.websock.Chat.Model.ChatMessage
+import com.shook.websock.Chat.Entity.ChatMessage
 import com.shook.websock.Chat.Service.ChatService
 import org.springframework.stereotype.Component
 import org.springframework.web.socket.BinaryMessage

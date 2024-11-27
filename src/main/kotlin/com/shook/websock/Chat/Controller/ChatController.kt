@@ -1,13 +1,12 @@
 package com.shook.websock.Chat.Controller
-import com.shook.websock.Chat.ChatRoom.ChatRoom
-import com.shook.websock.Chat.DTO.BaseDTO
+import com.shook.websock.Base.DTO.BaseDTO
 import com.shook.websock.Chat.DTO.RoomDTO
 import com.shook.websock.Chat.Service.ChatService
 import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/chat")
-class Controller(private val service: ChatService) {
+class ChatController(private val service: ChatService) {
 
     @PostMapping()
     fun createRoom(@RequestBody roomDTO: RoomDTO): BaseDTO {
