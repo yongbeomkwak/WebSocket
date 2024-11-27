@@ -4,8 +4,10 @@ import com.shook.websock.Base.DTO.BaseDTO
 import com.shook.websock.Broadcast.DTO.BroadcastDTO
 import com.shook.websock.Broadcast.Entity.Broadcast
 import com.shook.websock.Broadcast.Service.BroadcastService
+import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.web.bind.annotation.*
 
+@Tag(name = "방송", description = "방송을 생성, 삭제, 조회")
 @RestController
 @RequestMapping("/broadcast")
 class BroadcastController(private val service: BroadcastService ) {
