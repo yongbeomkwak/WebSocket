@@ -1,14 +1,15 @@
 package com.shook.websock.Chat.ChatRoom
 
+import com.shook.websock.Broadcast.Service.BroadcastService
 import com.shook.websock.Chat.Entity.ChatMessage
 import com.shook.websock.Chat.Entity.MessageType
-import com.shook.websock.Chat.Service.ChatService
 import org.springframework.web.socket.WebSocketSession
+import java.util.stream.Stream
 
 public class ChatRoom(val roomId: String) {
     private var sessions: MutableSet<WebSocketSession> = mutableSetOf()
 
-    public fun handleActions(session: WebSocketSession, message: ChatMessage, service: ChatService) {
+    public fun handleActions(session: WebSocketSession, message: ChatMessage, service: BroadcastService) {
         if (message.type == MessageType.ENTER) {
             sessions.add(session)
             message.content = message.sender + "님이 입장했습니다."
@@ -28,11 +29,15 @@ public class ChatRoom(val roomId: String) {
         sessions.clear()
     }
 
-    private fun<T> sendMessage(message: T, service: ChatService) {
+    public fun sessionStream(): Stream<WebSocketSession> {
+        return sessions.parallelStream()
+    }
+
+    private fun<T> sendMessage(message: T, service: BroadcastService) {
         sessions.parallelStream().forEach {  service.sendMessage(it, message)}
     }
 
-    private fun<T> joinMessage(message: T, service: ChatService, session: WebSocketSession) {
+    private fun<T> joinMessage(message: T, service: BroadcastService, session: WebSocketSession) {
         service.sendMessage(session, message)
     }
 }

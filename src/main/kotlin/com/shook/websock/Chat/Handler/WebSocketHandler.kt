@@ -2,8 +2,8 @@ package com.shook.websock.Chat.Handler
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import com.shook.websock.Broadcast.Service.BroadcastService
 import com.shook.websock.Chat.Entity.ChatMessage
-import com.shook.websock.Chat.Service.ChatService
 import org.springframework.stereotype.Component
 import org.springframework.web.socket.BinaryMessage
 import org.springframework.web.socket.CloseStatus
@@ -12,7 +12,7 @@ import org.springframework.web.socket.WebSocketSession
 import org.springframework.web.socket.handler.TextWebSocketHandler
 
 @Component
-public class WebSocketHandler(private  val service: ChatService) :  TextWebSocketHandler() {
+public class WebSocketHandler(private  val service: BroadcastService) :  TextWebSocketHandler() {
 
     private val objectMapper: ObjectMapper = ObjectMapper()
     private var roomIdMapper: HashMap<WebSocketSession, String> = HashMap<WebSocketSession, String>()

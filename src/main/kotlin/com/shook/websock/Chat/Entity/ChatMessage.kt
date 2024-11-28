@@ -1,7 +1,7 @@
 package com.shook.websock.Chat.Entity
 
 public enum class MessageType {
-        ENTER, CHAT
+        ENTER, CHAT, TERMINATE
 }
 
 
