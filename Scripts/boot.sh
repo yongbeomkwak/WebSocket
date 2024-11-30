@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 # 특정 패턴을 가진 프로세스의 PID 가져오기
 PATTERN="0.0.1-SNAPSHOT.jar"
 
