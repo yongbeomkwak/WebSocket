@@ -22,7 +22,8 @@ class BroadcastService(private var broadcasts: HashMap<String, Broadcast>,
             createRoom(id = new.id)
             return BaseDTO(200, message = "${new.id} 방송을 시작합니다" )
         }
-        return return BaseDTO(200, message = "이미 ${new.id} 방송이 존재합니다.")
+
+        return BaseDTO(200, message = "이미 ${new.id} 방송이 존재합니다.")
     }
 
     fun deleteBroadcast(id: String): BaseDTO {
